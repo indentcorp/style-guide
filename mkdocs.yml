@@ -21,3 +21,7 @@ theme:
   favicon: assets/favicon.png
   # icon:
   logo: assets/indent-logo.png
+
+markdown_extensions:
+- pymdownx.highlight
+- pymdownx.superfences

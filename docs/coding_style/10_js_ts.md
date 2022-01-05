@@ -36,6 +36,23 @@
 })();
 ```
 
+- **가장 좋은 방법은 항상 끝에 세미콜론을 작성하는 것입니다.
+  IIFE의 앞에 세미콜론을 넣는 것은, 혹시 발생할 실수를 막는 안전장치일 뿐입니다.**
+
+```JavaScript
+// foo.js (No tailing ;)
+const foo = function() { ... }
+
+// bar.js
+(() => { ... })();
+
+/*웹에서 js를 제공하기 위해 minimize는 항상 필요합니다. 따라서 두 파일을 하나로 합치는 경우도 잦습니다.
+패키징 등을 통해 foo.js와 bar.js 파일이 합쳐진다면, 코드는 아래와 같이 됩니다.*/
+
+// 이는 foo를 정의하며 동시에 arrow function을 인자로 받아 실행시킵니다.
+const foo = function() { ... }(() => { ... })();
+```
+
 **[⬆ back to top](#목차)**
 
 ## 블록(Blocks)
@@ -50,7 +67,7 @@ if (test)
 // good
 if (test) return false;
 
-// good
+// best
 if (test) {
   return false;
 }
@@ -88,7 +105,7 @@ function() {
 
 ## 상수(constant)
 
-- 상수는 밑줄로 구분 된 ALL_UPPERCASE (대문자+언더스코어로만 구성) 로만 선언
+- 상수는 밑줄로 구분 된 UPPER_SNAKE_CASE (대문자 + 언더스코어로만 구성) 로만 선언
 
 ```JavaScript
 // bad
@@ -190,6 +207,23 @@ if (reviews.length) {
 }
 ```
 
+- 조건문은 의미 있는 내용을 사용
+
+```JavaScript
+const score = 30;
+
+// bad
+if (score >= 0 && score <= 70) {
+  // ...
+}
+
+// good
+const isWin = score >= 0 && score <= 70;
+if (isWin) {
+  // ...
+}
+```
+
 **[⬆ back to top](#목차)**
 
 ## 형변환과 강제(Type Casting & Coercion)
@@ -252,6 +286,7 @@ const hasScore = !!score;
 ## 명명규칙(Naming Conventions)
 
 - 변수명, 함수명은 의미를 알 수 있게 camelCase를 사용하여 선언
+- 함수명은 항상 '동사'로 시작해야 하며 do, execute등 의미를 명확히 알 수 없는 이름 금지
 - 축약형은 사용 금지
 
 ```JavaScript

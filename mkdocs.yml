@@ -22,7 +22,22 @@ theme:
   # icon:
   logo: assets/indent-logo.png
 
+nav:
+- index.md
+- Coding Style:
+  - coding_style/python.md
+  - coding_style/js_ts.md
+- Git:
+  - git/repository.md
+  - git/commit.md
+- Infrastructure:
+  - infrastructure/aws.md
+  - infrastructure/terraform.md
+
+
 markdown_extensions:
+- toc:
+    permalink: True
 - pymdownx.highlight
 - pymdownx.superfences
 - attr_list

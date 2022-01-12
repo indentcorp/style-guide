@@ -1,4 +1,4 @@
-# aws (Amazon Web Services)
+# aws
 
 
 ## IAM Role / Policy
@@ -16,12 +16,12 @@
 ### Environment Code
 환경에 대한 코드입니다. 아래의 표를 참고하여 acronym 을 사용하시기 바랍니다.
 
-| environment | description | acronym | 
+| environment | description | acronym |
 | --- | --- | --- |
-| develop | 개발 환경입니다. | `dev` | 
-| staging |  QA를 위한 스테이지 환경입니다. | `staging` | 
+| develop | 개발 환경입니다. | `dev` |
+| staging |  QA를 위한 스테이지 환경입니다. | `staging` |
 | production | 프로덕션 환경입니다. | `prod` |
-| sandbox | 샌드박스 사용경험을 위한 프로덕션 환경입니다. | `sandbox` | 
+| sandbox | 샌드박스 사용경험을 위한 프로덕션 환경입니다. | `sandbox` |
 
 > `local` &rarr; `develop` &rarr; `staging` &rarr; `prod` or `sandbox` 의 순서로 인프라 프로비저닝 및 업데이트가 진행되어야 합니다.
 
@@ -31,10 +31,10 @@
 | service | description | acronym |
 | --- | --- | --- |
 | vreview | 브이리뷰 | `vreview` |
-| vreviewx | 브이리뷰 X | `vreviewx` |  
+| vreviewx | 브이리뷰 X | `vreviewx` |
 | vreview 2.0 | 브이리뷰 2.0 | `vreview2` |
 | openapi service | Open API 서비스 | `openapi` |
-| viewcounter | View Counter 서비스 | `vvcs` | 
+| viewcounter | View Counter 서비스 | `vvcs` |
 | ... | | |
 
 
@@ -64,12 +64,12 @@ sandbox-vreview-rds-ebssnapshot-iam-policy
 <environment-code>-<service-name>-<role>
 ```
 
-### Role 
+### Role
 | role | description | acronym |
 | --- | --- | --- |
-| API server | 백엔드 API 서버 | `api` | 
-| batch create api | 배치 API | `batchcreate` | 
-| database dump | 데이터베이스를 덤프 | `dbdump` | 
+| API server | 백엔드 API 서버 | `api` |
+| batch create api | 배치 API | `batchcreate` |
+| database dump | 데이터베이스를 덤프 | `dbdump` |
 | ... | | |
 
 ## Tag
@@ -107,7 +107,7 @@ resource "aws_db_instance" "master" {
   username             = "foo"
   password             = "foobarbaz"
   parameter_group_name = "default.mysql5.7"
-  
+
   tags = {
     Service         = "vreview"
     ApplicationType = "mysql"
@@ -137,7 +137,7 @@ resource "aws_security_group" "public_access" {
 # IAM role
 resource "aws_iam_role" "vreview_ec2" {
   name               = "prod-vreview-eks-service-iam-role"
-  
+
   assume_role_policy = <<EOF
 {
     "Version": "2012-10-17",

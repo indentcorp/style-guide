@@ -18,8 +18,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
-  # icon:
+  favicon: assets/indent-logo.png
+  icon: assets/indent-logo.png
   logo: assets/indent-logo.png
 
 nav:

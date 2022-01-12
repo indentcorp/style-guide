@@ -1,4 +1,4 @@
-# Commit
+# 커밋 (Commit)
 
 ## 원자적 커밋 (Atomic Commit)
 ![Commit bad example](assets/commit-bad-example.png){ loading=lazy }

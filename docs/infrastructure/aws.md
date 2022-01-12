@@ -1,4 +1,4 @@
-# aws
+# 아마존 웹 서비스 (aws)
 
 
 ## IAM Role / Policy

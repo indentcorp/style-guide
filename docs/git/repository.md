@@ -1,4 +1,4 @@
-# Repository
+# 저장소 (Repository)
 
 ## 네이밍
 

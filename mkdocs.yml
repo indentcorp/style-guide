@@ -24,15 +24,17 @@ theme:
 
 nav:
 - index.md
-- Coding Style:
+- 개발 가이드:
   - coding_style/python.md
   - coding_style/js_ts.md
-- Git:
+- 깃 (Git):
   - git/repository.md
   - git/commit.md
-- Infrastructure:
+- 인프라스트럭쳐:
   - infrastructure/aws.md
   - infrastructure/terraform.md
+- 기여:
+  - contribution/contribution.md
 
 
 markdown_extensions:
@@ -41,3 +43,6 @@ markdown_extensions:
 - pymdownx.highlight
 - pymdownx.superfences
 - attr_list
+- pymdownx.tabbed:
+    alternate_style: true
+

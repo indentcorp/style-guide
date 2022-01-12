@@ -1,4 +1,4 @@
-# Python
+# 파이썬 (Python)
 
 ## Code style
 코드 규약은 [PEP 8](https://www.python.org/dev/peps/pep-0008/)을 최대한 따라야 한다.

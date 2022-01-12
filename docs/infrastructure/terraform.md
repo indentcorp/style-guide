@@ -1,4 +1,4 @@
-# Terraform
+# 테라폼 (Terraform)
 
 Terraform example
 ```bash

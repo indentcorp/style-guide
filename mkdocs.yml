@@ -30,6 +30,7 @@ nav:
 - 깃 (Git):
   - git/repository.md
   - git/commit.md
+  - git/pr.md
 - 인프라스트럭쳐:
   - infrastructure/aws.md
   - infrastructure/terraform.md

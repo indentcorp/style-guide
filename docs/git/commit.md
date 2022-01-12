@@ -18,7 +18,7 @@
 
 잘 작성된 깃 커밋 메세지는 변경점에 대한 문맥을 동료 개발자들에게(혹은 미래의 나 자신에게) 전달하는데 가장 좋은 방법입니다. 토발즈와 같은 개발자는 그 사실을 잘 알고 있습니다. diff 뷰는 **어느** 코드가 변경되었는지는 잘 알려줍니다. 하지만 **왜** 변경되었는지는 깃 커밋 메세지만이 알려줄 수 있습니다.
 
-잘 관리된 깃 로그는 아름답고 유용합니다. git blame, revert, rebase, log, shortlog와 같은 서브 커맨드들이 이제 쓸모있어지기 시작합니다. 다른 사람의 커밋과 풀 리퀘스트를 리뷰하는 것이 훨씬 가치있는 일이 됩니다. 그리고 어느 순간, 이런 일들이 자동으로 되기 시작합니다. 몇 년 전, 혹은 몇 달 전 있었던 일이 왜 있었는지를 이해하는 것이 가능해집니다. 가능해질 뿐만 아니라, 훨씬 효율적이게 됩니다.
+잘 관리된 깃 로그는 아름답고 유용합니다. `git blame`, `revert`, `rebase`, `log`, `shortlog`와 같은 서브 커맨드들이 이제 쓸모있어지기 시작합니다. 다른 사람의 커밋과 풀 리퀘스트를 리뷰하는 것이 훨씬 가치있는 일이 됩니다. 그리고 어느 순간, 이런 일들이 자동으로 되기 시작합니다. 몇 년 전, 혹은 몇 달 전 있었던 일이 왜 있었는지를 이해하는 것이 가능해집니다. 가능해질 뿐만 아니라, 훨씬 효율적이게 됩니다.
 
 프로젝트의 장기적 성공은 유지보수가 용이한지에 따라 크게 좌우됩니다. 유지보수에 사용되는 툴들 중, 프로젝트의 로그보다 더 강력한 것은 거의 없습니다. 로그를 잘 작성하는것을 배우는 것은 시간을 들일 가치가 있는 일입니다. 이는 처음엔 귀찮은 일이겠지만, 곧 습관이 될 것이고, 결과적으로는 관계된 모두에게 자랑이자 생산성의 원천이 될 것입니다.
 
@@ -72,7 +72,7 @@ See also: #456, #789
 ```
 
 ### 1. 제목과 내용 사이에는 빈 줄을 하나 넣어 나누기
-git commit의 manpage에는 다음과 같은 내용이 있습니다.
+`git commit`의 manpage에는 다음과 같은 내용이 있습니다.
 
 > Though not required, it’s a good idea to begin the commit message with a single short (less than 50 character) line summarizing the change, followed by a blank line and then a more thorough description. The text up to the first blank line in a commit message is treated as the commit title, and that title is used throughout Git. For example, Git-format-patch(1) turns a commit into email, and it uses the title on the Subject line and the rest of the commit in the body.
 
@@ -84,7 +84,7 @@ git commit의 manpage에는 다음과 같은 내용이 있습니다.
 Fix typo in introduction to user guide
 ```
 
-더이상 무언가 설명할 필요가 없습니다. 만일 팀원이 오타가 무엇이었는지 궁금하다면, 단순히 코드 변경 내용을 보면 됩니다. 이때 git show, git diff 또는 git log -p 명령어가 사용됩니다.
+더이상 무언가 설명할 필요가 없습니다. 만일 팀원이 오타가 무엇이었는지 궁금하다면, 단순히 코드 변경 내용을 보면 됩니다. 이때 `git show`, `git diff` 또는 `git log -p` 명령어가 사용됩니다.
 
 하지만 커밋이 문맥을 설명할만한 가치가 있다면, 본문을 작성하세요. 예시는 다음과 같습니다.
 
@@ -172,13 +172,13 @@ GitHub은 이러한 규칙을 확실히 알고 있습니다. GitHub에서 커밋
 
 명령형으로 작성하는 것이 어떻게 보면 무례하게 받아들여질 수도 있습니다. 이렇게 명령형으로 작성하는 이유들 중 하나는 이미 **Git이 자동으로 커밋 메세지를 작성할 때 명령형을 사용하기 때문**입니다.
 
-예를 들어, git merge 명령이 작성하는 기본 메세지는 다음과 같습니다.
+예를 들어, `git merge` 명령이 작성하는 기본 메세지는 다음과 같습니다.
 
 ```
 Merge branch 'myfeature'
 ```
 
-git revert 명령을 이용해 커밋을 되돌리면 다음과 같은 커밋이 자동으로 생성됩니다.
+`git revert` 명령을 이용해 커밋을 되돌리면 다음과 같은 커밋이 자동으로 생성됩니다.
 
 ```
 Revert "Add the thing with the stuff"

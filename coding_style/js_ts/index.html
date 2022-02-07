@@ -1,0 +1,1015 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/indent-logo.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
+    
+    
+      
+        <title>자바스크립트 / 타입스크립트 (JavaScript / TypeScript) - Style Guide For Indenters</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d6be258b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#javascript-typescript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Style Guide For Indenters" class="md-header__button md-logo" aria-label="Style Guide For Indenters" data-md-component="logo">
+      
+  <img src="../../assets/indent-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Style Guide For Indenters
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              자바스크립트 / 타입스크립트 (JavaScript / TypeScript)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Style Guide For Indenters" class="md-nav__button md-logo" aria-label="Style Guide For Indenters" data-md-component="logo">
+      
+  <img src="../../assets/indent-logo.png" alt="logo">
+
+    </a>
+    Style Guide For Indenters
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Style Guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          개발 가이드
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="개발 가이드" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          개발 가이드
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        파이썬 (Python)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          자바스크립트 / 타입스크립트 (JavaScript / TypeScript)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        자바스크립트 / 타입스크립트 (JavaScript / TypeScript)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    목차
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semicolons" class="md-nav__link">
+    세미콜론(Semicolons)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocks" class="md-nav__link">
+    블록(Blocks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-function" class="md-nav__link">
+    화살표 함수(Arrow Function)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constant" class="md-nav__link">
+    상수(constant)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    문자열(String)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    모듈(Modules)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-statements" class="md-nav__link">
+    조건문(Conditional statements)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-casting-coercion" class="md-nav__link">
+    형변환과 강제(Type Casting &amp; Coercion)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    명명규칙(Naming Conventions)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          깃 (Git)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="깃 (Git)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          깃 (Git)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/repository/" class="md-nav__link">
+        저장소 (Repository)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/commit/" class="md-nav__link">
+        커밋 (Commit)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/pr/" class="md-nav__link">
+        풀 리퀘스트 (Pull Request, PR)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          인프라스트럭쳐
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="인프라스트럭쳐" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          인프라스트럭쳐
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/aws/" class="md-nav__link">
+        아마존 웹 서비스 (aws)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/terraform/" class="md-nav__link">
+        테라폼 (Terraform)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          기여
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="기여" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          기여
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/contribution/" class="md-nav__link">
+        기여하기
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    목차
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semicolons" class="md-nav__link">
+    세미콜론(Semicolons)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocks" class="md-nav__link">
+    블록(Blocks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-function" class="md-nav__link">
+    화살표 함수(Arrow Function)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constant" class="md-nav__link">
+    상수(constant)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    문자열(String)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    모듈(Modules)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-statements" class="md-nav__link">
+    조건문(Conditional statements)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-casting-coercion" class="md-nav__link">
+    형변환과 강제(Type Casting &amp; Coercion)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    명명규칙(Naming Conventions)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="javascript-typescript">자바스크립트 / 타입스크립트 (JavaScript / TypeScript)<a class="headerlink" href="#javascript-typescript" title="Permanent link">&para;</a></h1>
+<h2 id="_1">목차<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#세미콜론(Semicolons)">세미콜론(Semicolons)</a></li>
+<li><a href="#블록(Blocks)">블록(Blocks)</a></li>
+<li><a href="#화살표 함수(Arrow Function)">화살표 함수(Arrow Function)</a></li>
+<li><a href="#상수(constant)">상수(constant)</a></li>
+<li><a href="#문자열(String)">문자열(String)</a></li>
+<li><a href="#모듈(Modules)">모듈(Modules)</a></li>
+<li><a href="#조건문(Conditional statements)">조건문(Conditional statements)</a></li>
+<li><a href="#형변환과 강제(Type Casting &amp; Coercion)">형변환과 강제(Type Casting &amp; Coercion)</a></li>
+<li><a href="#명명규칙(Naming Conventions)">명명규칙(Naming Conventions)</a></li>
+</ol>
+<h2 id="semicolons">세미콜론(Semicolons)<a class="headerlink" href="#semicolons" title="Permanent link">&para;</a></h2>
+<ul>
+<li>세미콜론(;)은 사용한다</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Indenter&#39;</span>
+  <span class="k">return</span> <span class="nx">name</span>
+<span class="p">})()</span>
+
+<span class="c1">// good</span>
+<span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Indenter&#39;</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">})();</span>
+
+<span class="c1">// good (즉시함수가 연결된 2개의 파일일때 인수가 되는 부분을 보호)</span>
+<span class="p">;(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Indenter&#39;</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">})();</span>
+</code></pre></div>
+<ul>
+<li><strong>가장 좋은 방법은 항상 끝에 세미콜론을 작성하는 것입니다.
+  IIFE의 앞에 세미콜론을 넣는 것은, 혹시 발생할 실수를 막는 안전장치일 뿐입니다.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// foo.js (No tailing ;)</span>
+<span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+
+<span class="c1">// bar.js</span>
+<span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="p">...</span> <span class="p">})();</span>
+
+<span class="cm">/*웹에서 js를 제공하기 위해 minimize는 항상 필요합니다. 따라서 두 파일을 하나로 합치는 경우도 잦습니다.</span>
+<span class="cm">패키징 등을 통해 foo.js와 bar.js 파일이 합쳐진다면, 코드는 아래와 같이 됩니다.*/</span>
+
+<span class="c1">// 이는 foo를 정의하며 동시에 arrow function을 인자로 받아 실행시킵니다.</span>
+<span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="p">...</span> <span class="p">})();</span>
+</code></pre></div>
+<p><strong><a href="#목차">⬆ back to top</a></strong></p>
+<h2 id="blocks">블록(Blocks)<a class="headerlink" href="#blocks" title="Permanent link">&para;</a></h2>
+<ul>
+<li>복수행의 블록에는 <code>{}</code>를 생략하지 않기</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="c1">// good</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="c1">// best</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// bad</span>
+<span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong><a href="#목차">⬆ back to top</a></strong></p>
+<h2 id="arrow-function">화살표 함수(Arrow Function)<a class="headerlink" href="#arrow-function" title="Permanent link">&para;</a></h2>
+<ul>
+<li>(무명함수를 전달하는 듯한)함수식을 이용하는 경우 Arrow Function 사용</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="c1">// good</span>
+<span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">].</span><span class="nx">map</span><span class="p">((</span><span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><strong><a href="#목차">⬆ back to top</a></strong></p>
+<h2 id="constant">상수(constant)<a class="headerlink" href="#constant" title="Permanent link">&para;</a></h2>
+<ul>
+<li>상수는 밑줄로 구분 된 UPPER_SNAKE_CASE (대문자 + 언더스코어로만 구성) 로만 선언</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">NUMBER</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
+</code></pre></div>
+<p><strong><a href="#목차">⬆ back to top</a></strong></p>
+<h2 id="string">문자열(String)<a class="headerlink" href="#string" title="Permanent link">&para;</a></h2>
+<ul>
+<li>문자열은 single quotes (<code>''</code>) 사용</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Indenter&quot;</span><span class="p">;</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Indenter&#39;</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>template strings 사용</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="kd">function</span> <span class="nx">sayHi</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s1">&#39;How are you, &#39;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;?&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// bad</span>
+<span class="kd">function</span> <span class="nx">sayHi</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;How are you, &#39;</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">].</span><span class="nx">join</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="kd">function</span> <span class="nx">sayHi</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="sb">`How are you, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">?`</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong><a href="#목차">⬆ back to top</a></strong></p>
+<h2 id="modules">모듈(Modules)<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h2>
+<ul>
+<li>비표준 모듈시스템이 아니면 항상 (<code>import</code>/<code>export</code>) 를 이용</li>
+<li>파일 경로는 상대 경로가 아닌 절대 경로로 참조</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">IndentStyleGuide</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./IndentStyleGuide&#39;</span><span class="p">);</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">IndentStyleGuide</span><span class="p">.</span><span class="nx">es6</span><span class="p">;</span>
+
+<span class="c1">// ok</span>
+<span class="k">import</span> <span class="nx">IndentStyleGuide</span> <span class="kr">from</span> <span class="s1">&#39;@/src/IndentStyleGuide&#39;</span><span class="p">;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">IndentStyleGuide</span><span class="p">.</span><span class="nx">es6</span><span class="p">;</span>
+
+<span class="c1">// best</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">es6</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@/src/IndentStyleGuide&#39;</span><span class="p">;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">es6</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>wildcard import는 이용 금지</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="k">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">IndentStyleGuide</span> <span class="kr">from</span> <span class="s1">&#39;./IndentStyleGuide&#39;</span><span class="p">;</span>
+
+<span class="c1">// good</span>
+<span class="k">import</span> <span class="nx">IndentStyleGuide</span> <span class="kr">from</span> <span class="s1">&#39;@/src/IndentStyleGuide&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p><strong><a href="#목차">⬆ back to top</a></strong></p>
+<h2 id="conditional-statements">조건문(Conditional statements)<a class="headerlink" href="#conditional-statements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>조건문은 단축식을 사용</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">name</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="c1">// bad</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">reviews</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">reviews</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>조건문은 의미 있는 내용을 사용</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">score</span> <span class="o">=</span> <span class="mf">30</span><span class="p">;</span>
+
+<span class="c1">// bad</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">score</span> <span class="o">&gt;=</span> <span class="mf">0</span> <span class="o">&amp;&amp;</span> <span class="nx">score</span> <span class="o">&lt;=</span> <span class="mf">70</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">isWin</span> <span class="o">=</span> <span class="nx">score</span> <span class="o">&gt;=</span> <span class="mf">0</span> <span class="o">&amp;&amp;</span> <span class="nx">score</span> <span class="o">&lt;=</span> <span class="mf">70</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">isWin</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong><a href="#목차">⬆ back to top</a></strong></p>
+<h2 id="type-casting-coercion">형변환과 강제(Type Casting &amp; Coercion)<a class="headerlink" href="#type-casting-coercion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>문의 선두에서 형의 강제를 행함</li>
+<li>String</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">reviewScore</span> <span class="o">=</span> <span class="mf">9</span><span class="p">;</span>
+
+<span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">totalScore</span> <span class="o">=</span> <span class="nx">reviewScore</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">totalScore</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">reviewScore</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>Number</li>
+<li><code>Number</code> 로 형변환하는 경우는 <code>parseInt</code> 를 이용하고, 항상 형변환을 위한 기수를 인수로 전달</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">inputValue</span> <span class="o">=</span> <span class="s1">&#39;4&#39;</span><span class="p">;</span>
+
+<span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">numberValue</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">);</span>
+
+<span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">numberValue</span> <span class="o">=</span> <span class="o">+</span><span class="nx">inputValue</span><span class="p">;</span>
+
+<span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">numberValue</span> <span class="o">=</span> <span class="nx">inputValue</span> <span class="o">&gt;&gt;</span> <span class="mf">0</span><span class="p">;</span>
+
+<span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">numberValue</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">numberValue</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">numberValue</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>Boolean</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+
+<span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">hasScore</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">hasScore</span> <span class="o">=</span> <span class="nb">Boolean</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">hasScore</span> <span class="o">=</span> <span class="o">!!</span><span class="nx">score</span><span class="p">;</span>
+</code></pre></div>
+<p><strong><a href="#목차">⬆ back to top</a></strong></p>
+<h2 id="naming-conventions">명명규칙(Naming Conventions)<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>변수명, 함수명은 의미를 알 수 있게 camelCase를 사용하여 선언</li>
+<li>함수명은 항상 '동사'로 시작해야 하며 do, execute등 의미를 명확히 알 수 없는 이름 금지</li>
+<li>축약형은 사용 금지</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// bad</span>
+<span class="kd">const</span> <span class="nx">rr</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">const</span> <span class="nx">review_results</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">const</span> <span class="nx">rd</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="kd">const</span> <span class="nx">review_data</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="kd">const</span> <span class="nx">fn</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{};</span>
+
+<span class="c1">// good</span>
+<span class="kd">const</span> <span class="nx">reviewResults</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">const</span> <span class="nx">reviewData</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="kd">const</span> <span class="nx">handleReviewStatus</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{};</span>
+</code></pre></div>
+<ul>
+<li>컴포넌트명과 파일명(or 폴더명)은 PascalCase를 사용</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// CheckBox.tsx</span>
+<span class="kd">const</span> <span class="nx">CheckBox</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">CheckBox</span><span class="p">;</span>
+
+<span class="c1">// in some other file</span>
+<span class="c1">// bad</span>
+<span class="k">import</span> <span class="nx">CheckBox</span> <span class="kr">from</span> <span class="s1">&#39;./checkBox&#39;</span><span class="p">;</span>
+
+<span class="c1">// bad</span>
+<span class="k">import</span> <span class="nx">CheckBox</span> <span class="kr">from</span> <span class="s1">&#39;./check_box&#39;</span><span class="p">;</span>
+
+<span class="c1">// good</span>
+<span class="k">import</span> <span class="nx">CheckBox</span> <span class="kr">from</span> <span class="s1">&#39;@/components/CheckBox&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 파이썬 (Python)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              파이썬 (Python)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../git/repository/" class="md-footer__link md-footer__link--next" aria-label="Next: 저장소 (Repository)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              저장소 (Repository)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e3b2bf44.min.js"></script>
+      
+    
+  </body>
+</html>
